@@ -19,7 +19,7 @@ const App: React.FC = () => {
   const { isAuthenticated } = useAppSelector((state) => state.auth);
 
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <SocketInitializer />
       <div className="app">
         {isAuthenticated && <Navigation />}

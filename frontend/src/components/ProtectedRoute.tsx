@@ -10,7 +10,7 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
   const { isAuthenticated } = useAppSelector((state) => state.auth);
 
   if (!isAuthenticated) {
-    window.location.href = '/login';
+    window.location.href = `${import.meta.env.BASE_URL}login`;
     return null;
   }
 
